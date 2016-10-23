@@ -1,0 +1,58 @@
+.container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.box {
+	width: 100%;
+	height: 150px;
+	line-height: 150px;
+	font: 15px, sans-serif;
+	text-align: center;
+	letter-spacing: 3px;
+	color: white;
+}
+
+
+.dark_blue {
+	background-color: #3700ED;
+
+}
+
+.light_blue {
+	background-color: #26D5EE;
+}
+
+.green {
+	background-color: #67C34D;
+}
+
+
+@media screen and (min-width: 450px) {
+	.dark_blue {
+		width: 25% !important;
+	}
+	.light_blue {
+		width: 75% !important;
+	}
+
+	body {
+		background-color: #CFDED8;
+		text-decoration: overline;
+		color: white;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.dark_blue, .green {
+		width: 25% !important;
+	}
+	.light_blue {
+		width: 50% !important;
+	}
+	body {
+		background-color: #A0ABA5;
+		text-decoration: underline;
+		color: white;	
+	}
+}
