@@ -1,6 +1,7 @@
 .container {
 	display: flex;
 	flex-wrap: wrap;
+	width: 100%;
 }
 
 .box {
@@ -36,23 +37,21 @@
 
 
 @media screen and (min-width: 450px) {
-	.light_blue, .green {
+	.dark_blue, #container2 {
 		width: 50%;
 	}
 
 @media screen and (min-width: 600px) {
-	.dark_blue, .light_blue {
-		width: 50%
+	.red {
+		width: 25%;
+		order: -1;
 	}
-	.green, .red, .orange {
-		width: 33.33333%;
+	#container2 {
+		width: 50%;
+		order: 0;
 	}
-}
-
-@media screen and (min-width: 800px) {
-	.container {
-		width: 800px;
-		margin-right: auto;
-		margin-left: auto;
+	.dark_blue {
+		width: 25%;
+		order: 1;
 	}
 }
