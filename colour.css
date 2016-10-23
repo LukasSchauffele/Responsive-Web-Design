@@ -1,3 +1,19 @@
+nav {
+  width: 300px;
+  position: absolute;
+  /* This trasform moves the drawer off canvas. */
+  -webkit-transform: translate(-300px, 0);
+  transform: translate(-300px, 0);
+  /* Optionally, we animate the drawer. */
+  transition: transform 0.3s ease;
+}
+nav.open {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+
+
 .container {
 	display: flex;
 	flex-wrap: wrap;
@@ -6,7 +22,7 @@
 
 .box {
 	width: 100%;
-	line-height: 150px;
+	line-height: 50px;
 	font: 15px, sans-serif;
 	text-align: center;
 	letter-spacing: 3px;
@@ -35,23 +51,3 @@
 	background-color: #DC7606
 }
 
-
-@media screen and (min-width: 450px) {
-	.dark_blue, #container2 {
-		width: 50%;
-	}
-
-@media screen and (min-width: 600px) {
-	.red {
-		width: 25%;
-		order: -1;
-	}
-	#container2 {
-		width: 50%;
-		order: 0;
-	}
-	.dark_blue {
-		width: 25%;
-		order: 1;
-	}
-}

@@ -8,7 +8,7 @@
 </head>
 <body>			
 <content>
-
+	<nav id="drawer">
 	<div class="container">
 		<div class="box dark_blue">Dark blue</div>
 		<div class="container" id="container2">
@@ -16,6 +16,34 @@
 			<div class="box green">Green</div>
 		</div>
 		<div class="box red">Red</div>
+	</nav>
+
+	<main>
+		<a id="menu">
+			<svg xmlns="http://www.w3.org/2000/svg">
+	          <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"></path>
+	        </svg>
+		</a>
+	</main>
+
+
+<script>
+      /*
+       * Open the drawer when the menu ison is clicked.
+       */
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('main');
+      var drawer = document.querySelector('#drawer');
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+
+    </script>
 </content>
 
 </body>
